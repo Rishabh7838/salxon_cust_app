@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hello.one.x_cut.MainActivity">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </android.support.v4.widget.NestedScrollView>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mapRelativeLayout"
+        >
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbarlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000e0d0e"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:visibility="gone">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#000e0d0e"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/place_autocomplete_cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp"
+            android:layout_margin="20dp"
+            android:visibility="gone">
+            <fragment
+                android:id="@+id/place_autocomplete_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                />
+        </android.support.v7.widget.CardView>
+        <include
+            android:id="@+id/appBar_findsalonRV"
+            layout="@layout/find_salon_recyclerview"
+            android:visibility="gone"
+            />
+
+    </FrameLayout>
+
+    <!--<include layout="@layout/content_main"/>-->
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <android.support.v7.widget.CardView
+        android:id="@+id/sliderCV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#fafafa">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/sliderPB"
+                />
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/offerSlider"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        ></com.daimajia.slider.library.SliderLayout>
+            <LinearLayout
+                android:id="@+id/opendrawerImageLayout"
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+            <ImageView
+                android:id="@+id/opendrawerImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_format_list_bulleted_black_24dp"
+                android:layout_margin="8dp"/>
+            </LinearLayout>
+        </FrameLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/onTheSpotBookingFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        app:srcCompat="@drawable/ic_local_florist_black_24dp"
+        android:backgroundTint="#4fc3f7"/>
+    <!--#15aeba-->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/onTheSpotBookingFab"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginRight="10dp"
+        app:srcCompat="@drawable/ic_shopping_cart_black_24dp"
+        android:backgroundTint="#03a9f4"/>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/select_location_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fab"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginRight="10dp"
+        app:srcCompat="@drawable/ic_location_on_black_24dp"
+        android:backgroundTint="#0288d1"/>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/my_location_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/select_location_fab"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginRight="10dp"
+        app:srcCompat="@drawable/ic_my_location_black_24dp"
+        android:backgroundTint="#01579b"/>
+</RelativeLayout>
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+    android:id="@+id/relativeBottomSheetLayout"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    app:behavior_hideable="true"
+
+    app:behavior_peekHeight="50dp">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="#fafafa">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/bottomSheetPB"
+                />
+    <include layout="@layout/content_main"/>
+            </FrameLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="102dp"
+    android:padding="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:id="@+id/particularServiceCardView"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ff8a80">
+<TextView
+    android:id="@+id/haircutTV"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@android:color/black"
+    android:text="testing"
+    android:textSize="18sp"
+    android:textStyle="bold|italic"
+    android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/complementryServices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/haircutTV"
+            android:layout_marginTop="6dp"
+            android:textColor="@android:color/white"
+            android:text="HAIRCUT+HEADWASH+MASSAGE..."/>
+        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+            android:id="@+id/addServiceNumber_btn"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            app:textSize="8sp"
+            app:backGroundColor="#263228"
+            app:initialNumber="0"
+            app:finalNumber="10"
+            />
+        <TextView
+            android:id="@+id/serviceStatusTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Service"
+            android:textColor="#0f0"
+            android:layout_below="@id/addServiceNumber_btn"
+            android:layout_alignParentEnd="true"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white"/>
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

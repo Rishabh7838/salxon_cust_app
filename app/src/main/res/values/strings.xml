@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">salXon</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="slogan">Get Your Look</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="slide_1_title">No more advance booking</string>
+    <string name="slide_2_title">No more trust issues</string>
+    <string name="slide_3_title">Best salons</string>
+    <string name="slide_4_title">Money! Not an issue</string>
+
+    <string name="slide_1_desc">Book salon only when you want to go. We will find availability for you!</string>
+    <string name="slide_2_desc">Salxon services are same across all our salons! </string>
+    <string name="slide_3_desc">Our adaptive search will find only those salons that you always wanted!</string>
+    <string name="slide_4_desc">We care for you not money!</string>
+
+    //Login screen names
+    <string name="sign_up_label">Sign Up</string>
+    <string name="log_in_label">Log In</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="password_hint">Password</string>
+    <string name="number_hint">Number</string>
+    <string name="confirm_hint">Confirm Password</string>
+
+</resources>

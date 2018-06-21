@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/salonserviceRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hello.one.x_cut.SalonServices">
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        android:id="@+id/serviceSearchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:mt_speechMode="false"
+        app:mt_hint="Choose your Service"
+        android:visibility="gone"
+        />
+
+    <!--<de.hdodenhof.circleimageview.CircleImageView-->
+        <!--android:layout_width="60dp"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:layout_alignLeft="@+id/toggleGender"-->
+        <!--android:src=""/>-->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarlayoutSalonService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#29b6f6"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarSalonService"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#29b6f6"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/appbarlayoutSalonService"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/toggleGender"
+        android:src="@drawable/male_beard"
+
+        />
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/appbarlayoutSalonService"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/toggleGender"
+        android:src="@drawable/left_face"
+        android:layout_marginRight="20dp"
+        />
+<ToggleButton
+    android:id="@+id/toggleGender"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:background="@drawable/genderimages"
+    android:layout_centerHorizontal="true"
+    android:textOn=""
+    android:textOff=""
+    android:focusable="false"
+    android:layout_marginTop="5dp"
+    android:focusableInTouchMode="false"
+    android:layout_below="@+id/appbarlayoutSalonService"
+    />
+    <TextView
+        android:id="@+id/GenderStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/toggleGender"
+        android:text="Male"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/GenderStatus"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp">
+    <include layout="@layout/servicerecyclerview"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+        <Button
+            android:id="@+id/serviceCartButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:text="Cart isn't Happy(0)"
+            android:textAlignment="textStart"
+            android:background="#03a9f4"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/findOnTheSpotSalonButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Find best salon"
+            android:background="#01579b"
+            android:textColor="@android:color/white"
+            android:textStyle="bold|italic"
+            />
+    </LinearLayout>
+</RelativeLayout>

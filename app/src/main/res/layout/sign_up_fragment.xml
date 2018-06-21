@@ -1,0 +1,147 @@
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    tools:background="@color/color_sign_up"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_begin="30dp"
+        android:orientation="horizontal" />
+
+    <View
+        android:id="@+id/logo"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="64dp"
+        android:layout_height="64dp"/>
+
+    <android.support.design.widget.TextInputLayout
+        style="@style/Widget.TextInputLayout"
+        android:id="@+id/email_input_signup"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <android.support.design.widget.TextInputEditText
+            style="@style/Widget.TextEdit"
+            android:id="@+id/email_input_edit"
+            android:hint="Number"
+            android:inputType="phone" />
+    </android.support.design.widget.TextInputLayout>
+ 
+
+    <android.support.design.widget.TextInputLayout
+        style="@style/Widget.TextInputLayout"
+        android:id="@+id/passwprd_input_signup"
+        app:layout_constraintTop_toBottomOf="@+id/email_input_signup"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <android.support.design.widget.TextInputEditText
+            style="@style/Widget.TextEdit"
+            android:id="@+id/password_input_edit"
+            android:hint="OTP"
+            android:inputType="number" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/Send_OTP_Signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send OTP"
+        android:clickable="true"
+        android:background="@drawable/state"
+        app:layout_constraintTop_toBottomOf="@+id/Resend_OTP_Signup"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/Resend_OTP_Signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resend OTP"
+        android:clickable="true"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/passwprd_input_signup"
+        app:layout_constraintRight_toRightOf="@+id/passwprd_input_signup"
+        android:layout_marginTop="4dp"/>
+    
+    <android.support.design.widget.TextInputLayout
+        style="@style/Widget.TextInputLayout"
+        android:id="@+id/confirm_password_signup"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/passwprd_input_signup"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <android.support.design.widget.TextInputEditText
+            style="@style/Widget.TextEdit"
+            android:id="@+id/confirm_password_edit"
+            android:hint="Name"
+            android:inputType="text"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        style="@style/Widget.TextInputLayout"
+        android:id="@+id/age_box"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_password_signup"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <android.support.design.widget.TextInputEditText
+            style="@style/Widget.TextEdit"
+            android:id="@+id/age_box_edit"
+            android:hint="Age"
+            android:inputType="number"/>
+    </android.support.design.widget.TextInputLayout>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/genderBox"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/state"
+        app:layout_constraintTop_toBottomOf="@+id/age_box"
+        app:layout_constraintLeft_toLeftOf="@+id/age_box"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male  "
+            android:id="@+id/Gendermale"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female  "
+            android:id="@+id/Genderfemale"/>
+    </RadioGroup>
+
+    <com.hello.one.x_cut.LoginAnimationClasses.VerticalTextView
+        android:id="@+id/caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/unfolded_size"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="@color/color_label"
+        android:text="@string/sign_up_label"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+</android.support.constraint.ConstraintLayout>
+

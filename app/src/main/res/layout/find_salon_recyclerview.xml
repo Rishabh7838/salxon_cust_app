@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.hello.one.x_cut.MainActivity"
+
+    >
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/findSalon_recycler_menu"
+        android:scrollbars="vertical">
+
+    </android.support.v7.widget.RecyclerView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+    <Button
+        android:id="@+id/Confirm_Booking"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Confirm Salon"
+
+        android:layout_weight="1"
+        />
+        <Button
+            android:id="@+id/Cancel_Booking"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="cancel booking"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            />
+    </LinearLayout>
+</FrameLayout>

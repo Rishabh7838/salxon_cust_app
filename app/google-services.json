@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "81677650474",
+    "firebase_url": "https://xcut-e1587.firebaseio.com",
+    "project_id": "xcut-e1587",
+    "storage_bucket": "xcut-e1587.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81677650474:android:3a71518f37eccc7b",
+        "android_client_info": {
+          "package_name": "com.hello.one.x_cut"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81677650474-faumhee9v5al46a9r4672bam25ef9i80.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hello.one.x_cut",
+            "certificate_hash": "4646949da8d091eccb829b1580106142d3df37fd"
+          }
+        },
+        {
+          "client_id": "81677650474-vvci3tams98lhrh4uhaticv5mvub4puu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS5Vf_1rGLPAy9AQB0ndxeBQ73Og-8sQ8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "81677650474-vvci3tams98lhrh4uhaticv5mvub4puu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
